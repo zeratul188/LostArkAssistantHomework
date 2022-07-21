@@ -10,13 +10,26 @@
 
     <!-- Design Colors -->
     <color name="background">#333333</color>
+    <color name="sub_background">#444444</color>
+    <color name="inner_background">#3d3d3d</color>
     <color name="complete_background">#555555</color>
     <color name="stroke">#80777777</color>
     <color name="actionbar">#333333</color>
     <color name="progress_background">#666666</color>
     <color name="progress">#75ED6D</color>
+    <color name="line_style">#444444</color>
+    <color name="disabled">#FF8888</color>
+    <color name="button">#3f3f3f</color>
+    <color name="button_clicked">#666666</color>
+    <color name="edit_background">#3f3f3f</color>
+    <color name="checkbox">#aaaaaa</color>
+    <color name="important">#cc4444</color>
+    <color name="important_clicked">#AA2222</color>
+    <color name="strong_stroke">#777777</color>
+    <color name="half_background">#CC777777</color>
 
     <!-- Font Colors -->
     <color name="main_font">#FFFFFF</color>
+    <color name="sub_font">#aaaaaa</color>
     <color name="disabled_font">#666666</color>
 </resources>

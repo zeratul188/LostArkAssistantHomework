@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dialog"
+    android:padding="15dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="자동으로 초기화가 되지 않았거나 수동으로 초기화가 필요할 시 사용합니다. 체크리스트를 초기화하시겠습니까?"
+        android:textSize="14dp"
+        android:textColor="@color/main_font"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/chkWeek"
+        android:text="주간 체크리스트도 초기화 여부"
+        android:buttonTint="@color/checkbox"
+        android:textSize="14dp"
+        android:textColor="@color/main_font"
+        android:layout_marginTop="10dp"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00000000"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/btnCancel"
+            android:text="취소"
+            android:textSize="14dp"
+            android:textColor="@color/main_font"
+            android:layout_marginRight="10dp"/>
+        <android.widget.Button
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnOK"
+            android:background="@drawable/button_important_style"
+            android:text="초기화"
+            android:textSize="14dp"
+            android:textColor="@color/white"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+
+</LinearLayout>

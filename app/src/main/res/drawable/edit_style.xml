@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_focused="true">
+        <shape>
+            <corners android:radius="10dp" />
+            <solid android:color="@color/edit_background"/>
+            <stroke android:color="@color/button_clicked"/>
+        </shape>
+    </item>
+    <item android:state_enabled="false">
+        <shape>
+            <corners android:radius="10dp" />
+            <solid android:color="@color/disabled"/>
+        </shape>
+    </item>
+    <item android:state_focused="false">
+        <shape>
+            <corners android:radius="10dp" />
+            <solid android:color="@color/edit_background"/>
+        </shape>
+    </item>
+</selector>

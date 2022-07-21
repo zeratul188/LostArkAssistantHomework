@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="캐릭터 레벨"
+        android:textSize="14dp"
+        android:textColor="@color/main_font"/>
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtLevel"
+        android:textSize="14dp"
+        android:textColor="@color/main_font"
+        android:hint="0 ~ 9999.99"
+        android:maxLength="7"
+        android:background="@drawable/edit_style"
+        android:padding="10dp"
+        android:inputType="numberDecimal"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@color/disabled_font"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="캐릭터 서버"
+        android:textSize="14dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/main_font"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/background_spinner"
+        android:popupBackground="@color/background"
+        android:layout_marginTop="5dp"
+        android:id="@+id/sprServers"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="캐릭터 직업"
+        android:textSize="14dp"
+        android:layout_marginTop="20dp"
+        android:textColor="@color/main_font"/>
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/background_spinner"
+        android:popupBackground="@color/background"
+        android:layout_marginTop="5dp"
+        android:id="@+id/sprJobs"/>
+</LinearLayout>

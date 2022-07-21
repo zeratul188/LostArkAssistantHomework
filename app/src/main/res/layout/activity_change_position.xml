@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".ChangePositionActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/toolBar"
+        android:minHeight="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"/>
+    <CheckBox
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:id="@+id/chkLevel"
+        android:text="높은 레벨 순으로 정렬"
+        android:buttonTint="@color/checkbox"
+        android:textSize="14dp"
+        android:layout_margin="10dp"
+        android:textColor="@color/main_font"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:id="@+id/listView"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    <android.widget.Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnApply"
+        android:background="@drawable/button_style"
+        android:text="적용"
+        android:textSize="14dp"
+        android:textColor="@color/main_font"
+        android:layout_margin="10dp"
+        style="?android:attr/borderlessButtonStyle"/>
+</LinearLayout>

@@ -6,9 +6,11 @@ import androidx.recyclerview.widget.RecyclerView
 
 class RecyclerViewDecoration: RecyclerView.ItemDecoration {
     var height: Int = 0
+    var width: Int = 0
 
-    constructor(height: Int) : super() {
+    constructor(width: Int, height: Int) : super() {
         this.height = height
+        this.width = width
     }
 
     override fun getItemOffsets(
@@ -19,5 +21,6 @@ class RecyclerViewDecoration: RecyclerView.ItemDecoration {
     ) {
         super.getItemOffsets(outRect, view, parent, state)
         outRect.top = height
+        outRect.right = width
     }
 }

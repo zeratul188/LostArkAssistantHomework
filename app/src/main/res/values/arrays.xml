@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="job">
+        <item>버서커</item>
+        <item>디스트로이어</item>
+        <item>워로드</item>
+        <item>홀리나이트</item>
+        <item>배틀마스터</item>
+        <item>인파이터</item>
+        <item>기공사</item>
+        <item>창술사</item>
+        <item>스트라이커</item>
+        <item>데빌헌터</item>
+        <item>블래스터</item>
+        <item>호크아이</item>
+        <item>스카우터</item>
+        <item>건슬링어</item>
+        <item>아르카나</item>
+        <item>서머너</item>
+        <item>바드</item>
+        <item>소서리스</item>
+        <item>데모닉</item>
+        <item>블레이드</item>
+        <item>리퍼</item>
+        <item>도화가</item>
+        <item>기상술사</item>
+    </string-array>
+
+    <string-array name="servers">
+        <item>루페온</item>
+        <item>카마인</item>
+        <item>카제로스</item>
+        <item>카단</item>
+        <item>아브렐슈드</item>
+        <item>실리안</item>
+        <item>아만</item>
+        <item>니나브</item>
+    </string-array>
+
+    <string-array name="ends">
+        <item>회</item>
+        <item>번</item>
+        <item>관문</item>
+        <item>개</item>
+        <item>마리</item>
+        <item>명</item>
+    </string-array>
+
+    <string-array name="darkmode">
+        <item>밝은 테마</item>
+        <item>어두운 테마</item>
+        <item>시스템 설정에 맞게</item>
+    </string-array>
+</resources>

@@ -1,13 +1,9 @@
 package com.lostark.lostarkassistanthomework.checklist.objects
 
-import android.graphics.drawable.Drawable
-
-data class ShareChecklist (
+data class Checklist(
     var name: String,
-    var icon: Drawable,
     var now: Int,
     var max: Int,
+    var icon: String,
     var end: String
-) {
-
-}
+)

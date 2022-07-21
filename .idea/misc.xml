@@ -14,10 +14,65 @@
         <entry key="..\:/Users/zerat/AndroidStudioProjects/LostArkAssistantHomework/app/src/main/res/layout/item_checklist.xml" value="0.2046875" />
         <entry key="..\:/Users/zerat/AndroidStudioProjects/LostArkAssistantHomework/app/src/main/res/menu/main_menu.xml" value="0.2046875" />
         <entry key="..\:/Users/zerat/AndroidStudioProjects/LostArkAssistantHomework/app/src/main/res/menu/main_tab.xml" value="0.2046875" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable-v24/add_button_style.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/background_dialog.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/background_spinner.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/background_toast.xml" value="0.1" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/button_important_style.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/button_ok_style.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/button_style.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/edit_style.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/ic_baseline_add_24.xml" value="0.2465" />
         <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/ic_baseline_attach_money_24.xml" value="0.1" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/ic_baseline_delete_outline_24.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/ic_baseline_format_list_numbered_24.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/ic_baseline_refresh_30.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/ic_baseline_settings_24.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/ic_point.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/item_checklist_background.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/item_checklist_disabled_background.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/item_checklist_half_background.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/selected_item_style.xml" value="0.1" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/switch_style.xml" value="0.2465" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/drawable/unselected_item_style.xml" value="0.1" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/activity_add.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/activity_change_position.xml" value="0.18" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/activity_edit.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/activity_family_edit.xml" value="0.33" />
         <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/activity_main.xml" value="0.2692502532928065" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/activity_money.xml" value="0.31302083333333336" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/activity_setting.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/dialog_add_homework.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/dialog_gold_list.xml" value="0.31302083333333336" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/dialog_icon.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/dialog_reset.xml" value="0.31302083333333336" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/dialog_yesno.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/dialog_yesorno.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/fragment_add_preset.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/fragment_add_self.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/fragment_auto.xml" value="0.33" />
         <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/fragment_checklist.xml" value="0.31302083333333336" />
-        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/item_checklist.xml" value="0.2851851851851852" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/fragment_edit_homework.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/fragment_edit_rest.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/fragment_gold.xml" value="0.41388888888888886" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/fragment_list_day.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/fragment_self.xml" value="0.5536458333333333" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/item_add_preset.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/item_checklist.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/item_chracter.xml" value="0.29411764705882354" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/item_chracter_list.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/item_edit.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/item_family_checklist.xml" value="0.33" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/item_gold_chracter.xml" value="0.31302083333333336" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/item_icon.xml" value="0.31302083333333336" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/item_position.xml" value="0.31302083333333336" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/layout_toast.xml" value="0.2851851851851852" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/layout/txt_item_job.xml" value="0.5536458333333333" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/menu/add_menu.xml" value="0.5536458333333333" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/menu/edit_menu.xml" value="0.5536458333333333" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/menu/homework_menu.xml" value="0.5536458333333333" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/menu/main_menu.xml" value="0.5536458333333333" />
+        <entry key="..\:/mobile workspace/LostArkAssistantHomework/app/src/main/res/menu/main_tab.xml" value="0.5536458333333333" />
       </map>
     </option>
   </component>

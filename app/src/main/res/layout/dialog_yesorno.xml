@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="300dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_dialog"
+    android:padding="15dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtContent"
+        android:text="Custom Dialog Content"
+        android:textSize="14dp"
+        android:textColor="@color/main_font"/>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_gravity="right"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="60dp"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#00000000"
+            style="?android:attr/borderlessButtonStyle"
+            android:id="@+id/btnCancel"
+            android:text="취소"
+            android:textSize="14dp"
+            android:textColor="@color/main_font"
+            android:layout_marginRight="10dp"/>
+        <android.widget.Button
+            android:layout_width="80dp"
+            android:layout_height="match_parent"
+            android:id="@+id/btnOK"
+            android:background="@drawable/button_style"
+            android:text="확인"
+            android:textSize="14dp"
+            android:textColor="@color/main_font"
+            style="?android:attr/borderlessButtonStyle"/>
+    </LinearLayout>
+
+</LinearLayout>

@@ -13,6 +13,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/toolBar"
         android:minHeight="?attr/actionBarSize"
+        app:menu="@menu/main_menu"
         android:background="?attr/colorPrimary"/>
     <FrameLayout
         android:layout_width="match_parent"
@@ -28,5 +29,6 @@
         app:itemIconTint="@drawable/bottom_navigation_select_text_style"
         app:itemTextColor="@drawable/bottom_navigation_select_text_style"
         android:layout_marginBottom="5dp"
+        android:visibility="gone"
         android:id="@+id/bottomNavigationView"/>
 </LinearLayout>
