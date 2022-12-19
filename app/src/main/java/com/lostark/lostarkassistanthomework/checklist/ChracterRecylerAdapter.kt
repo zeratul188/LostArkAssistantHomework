@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.core.view.get
 import androidx.fragment.app.FragmentActivity
 import androidx.recyclerview.widget.RecyclerView
@@ -13,6 +14,7 @@ import androidx.viewpager.widget.ViewPager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.lostark.lostarkassistanthomework.App
 import com.lostark.lostarkassistanthomework.R
+import com.lostark.lostarkassistanthomework.checklist.edit.EditActivity
 import com.lostark.lostarkassistanthomework.checklist.objects.Checklist
 import com.lostark.lostarkassistanthomework.checklist.rooms.Homework
 
@@ -119,7 +121,7 @@ class ChracterRecylerAdapter(
             progressHomework.progress = progress
             txtProgress.text = "${(progress.toDouble()/max.toDouble()*100).toInt()}"
 
-            val pagerAdapter = HomeworkPagerAdapter(lists, item, this, fragment, pagerMain)
+            val pagerAdapter = HomeworkPagerAdapter(lists, item, this, fragment, pagerMain, bottomNavigationView)
             pagerMain.adapter = pagerAdapter
 
             //pagerMain.currentItem = App.prefs.getInt("dayorweek", 0)
@@ -132,8 +134,8 @@ class ChracterRecylerAdapter(
                     positionOffset: Float,
                     positionOffsetPixels: Int
                 ) {
-                    bottomNavigationView.menu.getItem(position).setChecked(true)
-                    resized(position)
+                    bottomNavigationView.menu.getItem(position).isChecked = true
+                    resized(position, item)
                 }
 
                 override fun onPageSelected(position: Int) {
@@ -176,7 +178,7 @@ class ChracterRecylerAdapter(
             txtProgress.text = "${(progress.toDouble()/max.toDouble()*100).toInt()}"
         }
 
-        fun resized(position: Int) {
+        fun resized(position: Int, item: Homework) {
             var pos = position
             if (App.prefs.getInt("dayorweek", 0) == 1) {
                 pos = 1-position
@@ -186,7 +188,8 @@ class ChracterRecylerAdapter(
                 view.measure(ViewGroup.LayoutParams.WRAP_CONTENT, ViewGroup.LayoutParams.WRAP_CONTENT)
                 //val width = view.measuredWidth
                 val height = view.measuredHeight
-                val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, height)
+                val params = ConstraintLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, height)
+                params.topToBottom = bottomNavigationView.id
                 pagerMain.layoutParams = params
             }
         }

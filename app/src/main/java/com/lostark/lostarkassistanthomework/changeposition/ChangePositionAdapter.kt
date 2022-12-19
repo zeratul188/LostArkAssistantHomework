@@ -1,4 +1,4 @@
-package com.lostark.lostarkassistanthomework
+package com.lostark.lostarkassistanthomework.changeposition
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -9,7 +9,8 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.core.view.MotionEventCompat
 import androidx.recyclerview.widget.RecyclerView
-import com.lostark.lostarkassistanthomework.checklist.EditItemTouchHelperCallback
+import com.lostark.lostarkassistanthomework.R
+import com.lostark.lostarkassistanthomework.checklist.edit.EditItemTouchHelperCallback
 import com.lostark.lostarkassistanthomework.checklist.rooms.Homework
 import java.util.*
 import kotlin.collections.ArrayList

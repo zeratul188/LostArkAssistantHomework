@@ -2,13 +2,13 @@
 <selector xmlns:android="http://schemas.android.com/apk/res/android">
     <item android:state_pressed="true">
         <shape>
-            <corners android:topLeftRadius="15dp" android:topRightRadius="15dp"/>
+            <!--<corners android:topLeftRadius="15dp" android:topRightRadius="15dp"/>-->
             <solid android:color="@color/button_clicked"/>
         </shape>
     </item>
     <item android:state_pressed="false">
         <shape>
-            <corners android:topLeftRadius="15dp" android:topRightRadius="15dp"/>
+            <!--<corners android:topLeftRadius="15dp" android:topRightRadius="15dp"/>-->
             <solid android:color="@color/inner_background"/>
         </shape>
     </item>

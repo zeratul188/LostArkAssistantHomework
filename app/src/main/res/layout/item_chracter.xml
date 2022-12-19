@@ -1,30 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/background"
-    android:padding="10dp">
-    <LinearLayout
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="homework"
+            type="com.lostark.lostarkassistanthomework.checklist.rooms.Homework" />
+    </data>
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/imgJob"
-            android:src="@drawable/jbi1"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"/>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        android:paddingBottom="10dp"
+        android:background="@color/background">
+        <ProgressBar
+            android:layout_width="match_parent"
+            android:layout_height="7dp"
+            app:layout_constraintTop_toTopOf="parent"
+            android:id="@+id/progressHomework"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:max="100"
+            android:progress="50"
+            android:progressDrawable="@drawable/progress_style"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            app:layout_constraintTop_toBottomOf="@id/layoutContent"
+            android:background="#00000000"
+            android:outlineProvider="none"
+            app:menu="@menu/homework_menu"
+            android:layout_marginTop="10dp"
+            app:itemIconTint="@drawable/bottom_navigation_select_text_style"
+            app:itemTextColor="@drawable/bottom_navigation_select_text_style"
+            android:id="@+id/bottomNavigationView"/>
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            app:layout_constraintTop_toBottomOf="@id/bottomNavigationView"
+            android:paddingRight="10dp"
+            android:paddingLeft="10dp"
+            android:id="@+id/pagerMain"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            app:layout_constraintTop_toBottomOf="@id/progressHomework"
+            android:padding="10dp"
+            android:id="@+id/layoutContent">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/imgJob"
+                android:src="@drawable/jbi1"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="@id/layoutName"
+                app:layout_constraintBottom_toTopOf="@id/layoutName"
                 android:id="@+id/txtServer"
                 android:text="Server"
                 android:textSize="12dp"
@@ -32,10 +66,13 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toRightOf="@id/imgJob"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/layoutName">
                 <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txtName"
                     android:text="일이삼사오육칠팔구십일이"
@@ -58,86 +95,62 @@
                     android:layout_marginLeft="5dp"
                     android:layout_gravity="center"/>
             </LinearLayout>
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtLevel"
-                    android:text="Lv.0"
-                    android:textSize="12dp"
-                    android:textColor="@color/sub_font"/>
-                <ImageView
-                    android:layout_width="12dp"
-                    android:layout_height="12dp"
-                    android:src="@drawable/ic_sub_point"
-                    android:padding="4dp"
-                    android:layout_gravity="center"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtJob"
-                    android:text="Job"
-                    android:textSize="12dp"
-                    android:textColor="@color/sub_font"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_gravity="center">
-            <LinearLayout
+            <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:orientation="horizontal">
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="진행도"
-                    android:textSize="10dp"
-                    android:layout_marginRight="5dp"
-                    android:textColor="@color/sub_font"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:id="@+id/txtProgress"
-                    android:text="100"
-                    android:textSize="24dp"
-                    android:textColor="@color/main_font"/>
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="%"
-                    android:textSize="20dp"
-                    android:textColor="@color/main_font"/>
-            </LinearLayout>
-            <ProgressBar
-                android:layout_width="100dp"
-                android:layout_height="3dp"
-                android:id="@+id/progressHomework"
-                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
-                android:max="100"
-                android:progress="50"
-                android:progressDrawable="@drawable/progress_style"
-                android:layout_marginTop="5dp"/>
-        </LinearLayout>
-    </LinearLayout>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#00000000"
-        android:outlineProvider="none"
-        app:menu="@menu/homework_menu"
-        android:layout_marginTop="10dp"
-        app:itemIconTint="@drawable/bottom_navigation_select_text_style"
-        app:itemTextColor="@drawable/bottom_navigation_select_text_style"
-        android:id="@+id/bottomNavigationView"/>
-    <androidx.viewpager.widget.ViewPager
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/pagerMain"/>
-</LinearLayout>
+                app:layout_constraintTop_toBottomOf="@id/layoutName"
+                app:layout_constraintLeft_toLeftOf="@id/layoutName"
+                android:id="@+id/txtLevel"
+                android:text="Lv.0"
+                android:textSize="12dp"
+                android:textColor="@color/sub_font"/>
+            <ImageView
+                android:layout_width="12dp"
+                android:layout_height="12dp"
+                app:layout_constraintTop_toTopOf="@id/txtLevel"
+                app:layout_constraintBottom_toBottomOf="@id/txtLevel"
+                app:layout_constraintLeft_toRightOf="@id/txtLevel"
+                android:src="@drawable/ic_sub_point"
+                android:id="@+id/imgDot"
+                android:padding="4dp"
+                android:layout_gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toRightOf="@id/imgDot"
+                app:layout_constraintTop_toBottomOf="@id/layoutName"
+                android:id="@+id/txtJob"
+                android:text="Job"
+                android:textSize="12dp"
+                android:textColor="@color/sub_font"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/txtProgress"
+                app:layout_constraintRight_toLeftOf="@id/txtProgress"
+                android:text="진행도"
+                android:textSize="10dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginBottom="2dp"
+                android:textColor="@color/sub_font"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/txtProgressEnd"
+                android:id="@+id/txtProgress"
+                android:text="100"
+                android:textSize="24dp"
+                android:textColor="@color/main_font"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/txtProgressEnd"
+                android:text="%"
+                android:textSize="24dp"
+                android:textColor="@color/main_font"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

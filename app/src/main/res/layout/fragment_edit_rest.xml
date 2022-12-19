@@ -1,26 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <LinearLayout
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:orientation="vertical">
-        <LinearLayout
+        android:layout_height="match_parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:padding="10dp">
             <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="카오스 던전"
                 android:textSize="14dp"
                 android:textColor="@color/main_font"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/txtDungeonMax"
                 android:id="@+id/txtDungeon"
                 android:text="0"
                 android:textSize="14dp"
@@ -29,163 +30,195 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/txtDungeonMax"
                 android:text="/100"
                 android:textSize="14dp"
                 android:textColor="@color/main_font"/>
-        </LinearLayout>
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:thumbTint="@color/progress"
-            android:progressTint="@color/progress"
-            android:id="@+id/seekDungeon"
-            android:max="10"
-            android:layout_marginTop="5dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+            <SeekBar
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtDungeon"
+                android:thumbTint="@color/progress"
+                android:progressTint="@color/progress"
+                android:id="@+id/seekDungeon"
+                android:max="10"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/seekDungeon"
+                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="가디언 토벌"
                 android:textSize="14dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/main_font"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/seekDungeon"
+                app:layout_constraintRight_toLeftOf="@id/txtBossMax"
                 android:id="@+id/txtBoss"
                 android:text="0"
                 android:textSize="14dp"
                 android:textStyle="bold"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/progress"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/seekDungeon"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/txtBossMax"
                 android:text="/100"
                 android:textSize="14dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/main_font"/>
-        </LinearLayout>
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:thumbTint="@color/progress"
-            android:progressTint="@color/progress"
-            android:id="@+id/seekBoss"
-            android:max="10"
-            android:layout_marginTop="5dp"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_marginTop="20dp">
-            <TextView
-                android:layout_width="0dp"
-                android:layout_weight="1"
+            <SeekBar
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtBoss"
+                android:thumbTint="@color/progress"
+                android:progressTint="@color/progress"
+                android:id="@+id/seekBoss"
+                android:max="10"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/seekBoss"
+                app:layout_constraintLeft_toLeftOf="parent"
                 android:text="에포나 의뢰"
                 android:textSize="14dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/main_font"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/seekBoss"
+                app:layout_constraintRight_toLeftOf="@id/txtQuestMax"
                 android:id="@+id/txtQuest"
                 android:text="0"
                 android:textSize="14dp"
                 android:textStyle="bold"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/progress"/>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/seekBoss"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/txtQuestMax"
                 android:text="/100"
                 android:textSize="14dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/main_font"/>
-        </LinearLayout>
-        <SeekBar
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:thumbTint="@color/progress"
-            android:progressTint="@color/progress"
-            android:id="@+id/seekQuest"
-            android:max="10"
-            android:layout_marginTop="5dp"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="사용된 휴식게이지"
-            android:textSize="14dp"
-            android:textColor="@color/main_font"
-            android:layout_marginTop="30dp"/>
-        <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp">
-            <TableRow>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="카오스 던전"
-                    android:textSize="14dp"
-                    android:textColor="@color/main_font"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="가디언 토벌"
-                    android:textSize="14dp"
-                    android:textColor="@color/main_font"/>
-                <TextView
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:text="에포나 의뢰"
-                    android:textSize="14dp"
-                    android:textColor="@color/main_font"/>
-            </TableRow>
-            <TableRow
-                android:layout_marginTop="5dp">
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:id="@+id/edtDungeon"
-                    android:textSize="14dp"
-                    android:textColor="@color/main_font"
-                    android:hint="0~100"
-                    android:maxLength="3"
-                    android:inputType="number"
-                    android:gravity="center"
-                    android:background="@drawable/edit_style"
-                    android:padding="5dp"
-                    android:layout_marginRight="10dp"
-                    android:textColorHint="@color/disabled_font"/>
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:id="@+id/edtBoss"
-                    android:textSize="14dp"
-                    android:textColor="@color/main_font"
-                    android:hint="0~100"
-                    android:maxLength="3"
-                    android:inputType="number"
-                    android:gravity="center"
-                    android:background="@drawable/edit_style"
-                    android:padding="5dp"
-                    android:layout_marginRight="10dp"
-                    android:textColorHint="@color/disabled_font"/>
-                <EditText
-                    android:layout_width="0dp"
-                    android:layout_weight="1"
-                    android:id="@+id/edtQuest"
-                    android:textSize="14dp"
-                    android:textColor="@color/main_font"
-                    android:hint="0~100"
-                    android:maxLength="3"
-                    android:inputType="number"
-                    android:gravity="center"
-                    android:background="@drawable/edit_style"
-                    android:padding="5dp"
-                    android:textColorHint="@color/disabled_font"/>
-            </TableRow>
-        </TableLayout>
-    </LinearLayout>
-</ScrollView>
+            <SeekBar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtQuestMax"
+                android:thumbTint="@color/progress"
+                android:progressTint="@color/progress"
+                android:id="@+id/seekQuest"
+                android:max="10"
+                android:layout_marginTop="5dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/seekQuest"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/txtRestInfo"
+                android:text="사용된 휴식게이지"
+                android:textSize="14dp"
+                android:textColor="@color/main_font"
+                android:layout_marginTop="30dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtRestInfo"
+                app:layout_constraintLeft_toLeftOf="@id/edtDungeon"
+                android:id="@+id/txtDungeonInfo"
+                android:text="카오스 던전"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/main_font"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtRestInfo"
+                app:layout_constraintLeft_toLeftOf="@id/edtBoss"
+                android:id="@+id/txtBossInfo"
+                android:text="가디언 토벌"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/main_font"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtRestInfo"
+                app:layout_constraintLeft_toLeftOf="@id/edtQuest"
+                android:id="@+id/txtQuestInfo"
+                android:text="에포나 의뢰"
+                android:textSize="14dp"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/main_font"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtDungeonInfo"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toLeftOf="@id/edtBoss"
+                app:layout_constraintHorizontal_weight="1"
+                android:id="@+id/edtDungeon"
+                android:textSize="14dp"
+                android:textColor="@color/main_font"
+                android:hint="0~100"
+                android:maxLength="3"
+                android:inputType="number"
+                android:gravity="center"
+                android:background="@drawable/edit_style"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:textColorHint="@color/disabled_font"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtBossInfo"
+                app:layout_constraintLeft_toRightOf="@id/edtDungeon"
+                app:layout_constraintRight_toLeftOf="@id/edtQuest"
+                app:layout_constraintHorizontal_weight="1"
+                android:id="@+id/edtBoss"
+                android:textSize="14dp"
+                android:textColor="@color/main_font"
+                android:hint="0~100"
+                android:maxLength="3"
+                android:inputType="number"
+                android:gravity="center"
+                android:background="@drawable/edit_style"
+                android:padding="5dp"
+                android:layout_marginRight="5dp"
+                android:layout_marginTop="5dp"
+                android:textColorHint="@color/disabled_font"/>
+            <EditText
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtQuestInfo"
+                app:layout_constraintLeft_toRightOf="@id/edtBoss"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintHorizontal_weight="1"
+                android:id="@+id/edtQuest"
+                android:textSize="14dp"
+                android:textColor="@color/main_font"
+                android:hint="0~100"
+                android:maxLength="3"
+                android:inputType="number"
+                android:gravity="center"
+                android:background="@drawable/edit_style"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:textColorHint="@color/disabled_font"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+</layout>

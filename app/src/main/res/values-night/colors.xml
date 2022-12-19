@@ -16,18 +16,21 @@
     <color name="complete_background">#555555</color>
     <color name="stroke">#80777777</color>
     <color name="actionbar">#333333</color>
-    <color name="progress_background">#666666</color>
-    <color name="progress">#75ED6D</color>
+    <color name="progress_background">#555555</color>
+    <color name="progress">#748DE6</color>
     <color name="line_style">#444444</color>
     <color name="disabled">#FF8888</color>
     <color name="button">#3f3f3f</color>
     <color name="button_clicked">#666666</color>
     <color name="edit_background">#3f3f3f</color>
     <color name="checkbox">#aaaaaa</color>
-    <color name="important">#cc4444</color>
-    <color name="important_clicked">#AA2222</color>
+    <color name="important">#5E74C3</color>
+    <color name="important_clicked">#3B4A80</color>
+    <color name="ok">#53C64B</color>
+    <color name="ok_clicked">#529E4D</color>
     <color name="strong_stroke">#777777</color>
     <color name="half_background">#CC777777</color>
+    <color name="half_check_background">#aa5E74C3</color>
 
     <!-- 품질 색 -->
     <color name="statuelevel1">#C83E3E</color>

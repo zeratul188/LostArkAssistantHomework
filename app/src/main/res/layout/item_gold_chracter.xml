@@ -1,47 +1,66 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/background"
-    android:padding="10dp">
-    <LinearLayout
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-        <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
-            android:id="@+id/imgJob"
-            android:src="@drawable/jbi1"
-            android:layout_gravity="center"
-            android:layout_marginRight="10dp"/>
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_weight="1"
+        android:layout_height="wrap_content">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:background="@color/background"
+            android:padding="10dp">
             <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtServer"
-                android:text="Server"
-                android:textSize="12dp"
-                android:textColor="@color/sub_font"/>
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:id="@+id/txtName"
-                android:text="Chracter Name"
-                android:textSize="16dp"
-                android:textColor="@color/main_font"/>
-            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:id="@+id/txtContent"
+                android:text="content"
+                android:textSize="14dp"
+                android:padding="5dp"
+                android:background="@color/sub_background"
+                android:textColor="@color/main_font"/>
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:layout_constraintTop_toTopOf="@id/layoutMain"
+                app:layout_constraintBottom_toBottomOf="@id/layoutMain"
+                app:layout_constraintLeft_toLeftOf="parent"
+                android:id="@+id/imgJob"
+                android:src="@drawable/jbi1"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"/>
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/layoutMain"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/txtContent"
+                app:layout_constraintLeft_toRightOf="@id/imgJob"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp">
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/txtServer"
+                    android:text="Server"
+                    android:textSize="12dp"
+                    android:textColor="@color/sub_font"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/txtServer"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:id="@+id/txtName"
+                    android:text="Chracter Name"
+                    android:textSize="16dp"
+                    android:textColor="@color/main_font"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/txtName"
+                    app:layout_constraintLeft_toLeftOf="parent"
                     android:id="@+id/txtLevel"
                     android:text="Lv.0"
                     android:textSize="12dp"
@@ -49,58 +68,83 @@
                 <ImageView
                     android:layout_width="12dp"
                     android:layout_height="12dp"
+                    app:layout_constraintTop_toTopOf="@id/txtLevel"
+                    app:layout_constraintBottom_toBottomOf="@id/txtLevel"
+                    app:layout_constraintLeft_toRightOf="@id/txtLevel"
+                    android:id="@+id/imgDot"
                     android:src="@drawable/ic_sub_point"
                     android:padding="4dp"
                     android:layout_gravity="center"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/txtName"
+                    app:layout_constraintLeft_toRightOf="@id/imgDot"
                     android:id="@+id/txtJob"
                     android:text="Job"
                     android:textSize="12dp"
                     android:textColor="@color/sub_font"/>
-            </LinearLayout>
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:orientation="vertical">
+            </androidx.constraintlayout.widget.ConstraintLayout>
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/txtGoldInfo"
                 android:text="골드 획득량"
                 android:textSize="10dp"
                 android:layout_gravity="right"
                 android:textColor="@color/sub_font"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                app:layout_constraintTop_toTopOf="@id/txtGold"
+                app:layout_constraintBottom_toBottomOf="@id/txtGold"
+                app:layout_constraintRight_toLeftOf="@id/txtGold"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/icon_gold"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/txtGoldInfo"
+                app:layout_constraintRight_toRightOf="parent"
+                android:id="@+id/txtGold"
+                android:text="0"
+                android:textSize="16dp"
+                android:textColor="@color/main_font"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
+            </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:orientation="horizontal">
-                <ImageView
-                    android:layout_width="20dp"
-                    android:layout_height="20dp"
-                    android:src="@drawable/icon_gold"/>
-                <TextView
+                android:layout_gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/txtGold"
-                    android:layout_marginLeft="5dp"
-                    android:text="0"
-                    android:textSize="16dp"
-                    android:textColor="@color/main_font"/>
+                    android:layout_gravity="right"
+                    android:orientation="horizontal">
+
+                </LinearLayout>
             </LinearLayout>
         </LinearLayout>
-    </LinearLayout>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/txtContent"
-        android:text="content"
-        android:textSize="14dp"
-        android:layout_marginTop="10dp"
-        android:padding="5dp"
-        android:background="@color/sub_background"
-        android:textColor="@color/main_font"/>
-</LinearLayout>
+    </FrameLayout>
+</layout>

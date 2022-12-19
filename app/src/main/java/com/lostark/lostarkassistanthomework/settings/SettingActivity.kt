@@ -1,4 +1,4 @@
-package com.lostark.lostarkassistanthomework
+package com.lostark.lostarkassistanthomework.settings
 
 import android.app.AlarmManager
 import android.app.PendingIntent
@@ -13,6 +13,8 @@ import android.view.View
 import android.widget.*
 import androidx.appcompat.app.AppCompatDelegate
 import androidx.appcompat.widget.Toolbar
+import com.lostark.lostarkassistanthomework.*
+import com.lostark.lostarkassistanthomework.changeposition.ChangePositionActivity
 import com.lostark.lostarkassistanthomework.checklist.rooms.Family
 import com.lostark.lostarkassistanthomework.checklist.rooms.FamilyDatabase
 import com.lostark.lostarkassistanthomework.checklist.rooms.HomeworkDatabase

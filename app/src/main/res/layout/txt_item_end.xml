@@ -4,7 +4,7 @@
     android:id="@+id/txtSpinnerItem"
     android:padding="3dp"
     android:text="test"
-    android:textSize="12dp" android:background="#00000000"
+    android:textSize="14dp" android:background="#00000000"
     android:gravity="center"
     android:textColor="@color/main_font">
 </TextView>

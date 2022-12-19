@@ -1,4 +1,4 @@
-package com.lostark.lostarkassistanthomework.checklist
+package com.lostark.lostarkassistanthomework.checklist.edit
 
 import android.content.Context
 import android.text.Editable
@@ -9,15 +9,13 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.*
 import androidx.core.view.MotionEventCompat
-import androidx.core.widget.addTextChangedListener
 import androidx.recyclerview.widget.RecyclerView
-import com.google.android.material.internal.TextWatcherAdapter
 import com.lostark.lostarkassistanthomework.App
-import com.lostark.lostarkassistanthomework.CheckDialog
+import com.lostark.lostarkassistanthomework.settings.CheckDialog
 import com.lostark.lostarkassistanthomework.CustomToast
 import com.lostark.lostarkassistanthomework.R
+import com.lostark.lostarkassistanthomework.checklist.IconSelectDialog
 import com.lostark.lostarkassistanthomework.checklist.rooms.Homework
-import com.lostark.lostarkassistanthomework.checklist.rooms.HomeworkDatabase
 import com.lostark.lostarkassistanthomework.objects.EditData
 import java.util.*
 import kotlin.collections.ArrayList
@@ -27,7 +25,8 @@ class EditRecyclerAdapter(
     private val context: Context,
     private val homework: Homework,
     private val startDragListener: OnStartDragListener
-) : RecyclerView.Adapter<EditRecyclerAdapter.ViewHolder>(), EditItemTouchHelperCallback.OnItemMoveListener {
+) : RecyclerView.Adapter<EditRecyclerAdapter.ViewHolder>(),
+    EditItemTouchHelperCallback.OnItemMoveListener {
 
     interface OnStartDragListener {
         fun onStartDrag(holder: ViewHolder)

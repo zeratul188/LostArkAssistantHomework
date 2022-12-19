@@ -16,22 +16,22 @@
             android:name=".checklist.InformationActivity"
             android:exported="false" />
         <activity
-            android:name=".MoneyActivity"
+            android:name=".settings.MoneyActivity"
             android:exported="false" />
         <activity
-            android:name=".ChangePositionActivity"
+            android:name=".changeposition.ChangePositionActivity"
             android:exported="false" />
         <activity
-            android:name=".checklist.FamilyEditActivity"
+            android:name=".checklist.edit.FamilyEditActivity"
             android:exported="false" />
         <activity
-            android:name=".checklist.EditActivity"
+            android:name=".checklist.edit.EditActivity"
             android:exported="false" />
         <activity
-            android:name=".SettingActivity"
+            android:name=".settings.SettingActivity"
             android:exported="false" />
         <activity
-            android:name=".AddActivity"
+            android:name=".add.AddActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:exported="false" />
         <activity

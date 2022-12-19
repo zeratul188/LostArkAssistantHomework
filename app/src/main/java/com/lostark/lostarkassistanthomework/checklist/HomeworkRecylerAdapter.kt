@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.lostark.lostarkassistanthomework.R
 import com.lostark.lostarkassistanthomework.checklist.objects.Checklist
@@ -231,7 +232,7 @@ class HomeworkRecylerAdapter(
         lateinit var txtName: TextView
         lateinit var txtCount: TextView
         lateinit var txtEnd: TextView
-        lateinit var layoutBackground: FrameLayout
+        lateinit var layoutBackground: ConstraintLayout
         lateinit var layoutComplete: LinearLayout
         fun bind(longListener: View.OnLongClickListener, listener: View.OnClickListener, item: Checklist, context: Context, homework: Homework) {
             imgIcon = view.findViewById(R.id.imgIcon)

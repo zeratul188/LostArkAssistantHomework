@@ -1,4 +1,4 @@
-package com.lostark.lostarkassistanthomework.checklist
+package com.lostark.lostarkassistanthomework.checklist.edit
 
 import android.content.Context
 import android.text.Editable
@@ -16,8 +16,9 @@ import androidx.viewpager.widget.PagerAdapter
 import com.google.android.material.button.MaterialButton
 import com.lostark.lostarkassistanthomework.CustomToast
 import com.lostark.lostarkassistanthomework.R
+import com.lostark.lostarkassistanthomework.checklist.AddDialog
+import com.lostark.lostarkassistanthomework.checklist.RecyclerViewDecoration
 import com.lostark.lostarkassistanthomework.checklist.rooms.Homework
-import com.lostark.lostarkassistanthomework.checklist.rooms.HomeworkDatabase
 import com.lostark.lostarkassistanthomework.objects.EditData
 
 class EditPagerAdapter(

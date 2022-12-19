@@ -13,19 +13,18 @@ import android.view.ViewGroup
 import android.widget.*
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.lostark.lostarkassistanthomework.App
-import com.lostark.lostarkassistanthomework.CloringThread
 import com.lostark.lostarkassistanthomework.LoadingDialog
 import com.lostark.lostarkassistanthomework.R
+import com.lostark.lostarkassistanthomework.checklist.edit.FamilyEditActivity
 import com.lostark.lostarkassistanthomework.checklist.rooms.Family
 import com.lostark.lostarkassistanthomework.checklist.rooms.FamilyDatabase
 import com.lostark.lostarkassistanthomework.checklist.rooms.Homework
 import com.lostark.lostarkassistanthomework.checklist.rooms.HomeworkDatabase
 import com.lostark.lostarkassistanthomework.dbs.FamilyDBAdapter
 import com.lostark.lostarkassistanthomework.dbs.GoldDBAdapter
-import com.lostark.lostarkassistanthomework.objects.Chracter
+import io.reactivex.rxjava3.disposables.CompositeDisposable
 import org.jsoup.Jsoup
 
 class ChecklistFragment : Fragment() {
@@ -56,6 +55,7 @@ class ChecklistFragment : Fragment() {
     lateinit var homeworkDB: HomeworkDatabase
 
     lateinit var goldDBAdapter: GoldDBAdapter
+    private var myCompositeDisposable = CompositeDisposable()
 
     val NOTIFYED = 1
 
@@ -98,7 +98,7 @@ class ChecklistFragment : Fragment() {
         txtAllGold = view.findViewById(R.id.txtAllGold)
         txtGold = view.findViewById(R.id.txtGold)
         btnList = view.findViewById(R.id.btnList)
-        layoutGold = view.findViewById(R.id.layoutGold)
+        //layoutGold = view.findViewById(R.id.layoutGold)
 
         btnSetting.setOnClickListener {
             val intent = Intent(context, FamilyEditActivity::class.java)
@@ -150,11 +150,11 @@ class ChecklistFragment : Fragment() {
     override fun onResume() {
         super.onResume()
         //resume()
-        if (App.prefs.isBoolean("showgold", true)) {
+        /*if (App.prefs.isBoolean("showgold", true)) {
             layoutGold.visibility = View.VISIBLE
         } else {
             layoutGold.visibility = View.GONE
-        }
+        }*/
     }
 
     fun initFamilys(list: ArrayList<Family>, type: String) {
@@ -256,6 +256,11 @@ class ChecklistFragment : Fragment() {
             }
         }
         txtGold.text = all.toString()
+    }
+
+    override fun onDestroy() {
+        myCompositeDisposable.clear()
+        super.onDestroy()
     }
 
     inner class HomeworkHandler : Handler() {

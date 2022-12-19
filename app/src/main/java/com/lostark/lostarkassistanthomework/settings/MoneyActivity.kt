@@ -1,4 +1,4 @@
-package com.lostark.lostarkassistanthomework
+package com.lostark.lostarkassistanthomework.settings
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,6 +7,8 @@ import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.RecyclerView
+import com.lostark.lostarkassistanthomework.CustomToast
+import com.lostark.lostarkassistanthomework.R
 import com.lostark.lostarkassistanthomework.checklist.RecyclerViewDecoration
 import com.lostark.lostarkassistanthomework.checklist.rooms.Homework
 import com.lostark.lostarkassistanthomework.checklist.rooms.HomeworkDatabase

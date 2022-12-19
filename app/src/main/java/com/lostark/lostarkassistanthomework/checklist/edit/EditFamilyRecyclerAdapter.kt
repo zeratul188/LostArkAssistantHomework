@@ -1,4 +1,4 @@
-package com.lostark.lostarkassistanthomework.checklist
+package com.lostark.lostarkassistanthomework.checklist.edit
 
 import android.content.Context
 import android.text.Editable
@@ -11,9 +11,10 @@ import android.widget.*
 import androidx.core.view.MotionEventCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.lostark.lostarkassistanthomework.App
-import com.lostark.lostarkassistanthomework.CheckDialog
+import com.lostark.lostarkassistanthomework.settings.CheckDialog
 import com.lostark.lostarkassistanthomework.CustomToast
 import com.lostark.lostarkassistanthomework.R
+import com.lostark.lostarkassistanthomework.checklist.IconSelectDialog
 import com.lostark.lostarkassistanthomework.checklist.rooms.Family
 import java.util.*
 import kotlin.collections.ArrayList
@@ -22,14 +23,15 @@ class EditFamilyRecyclerAdapter(
     private val familys: ArrayList<Family>,
     private val context: Context,
     private val startDragListener: OnStartDragListener
-): RecyclerView.Adapter<EditFamilyRecyclerAdapter.ViewHolder>(), EditItemTouchHelperCallback.OnItemMoveListener {
+): RecyclerView.Adapter<EditFamilyRecyclerAdapter.ViewHolder>(),
+    EditItemTouchHelperCallback.OnItemMoveListener {
     interface OnStartDragListener {
         fun onStartDrag(holder: ViewHolder)
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_edit, parent, false)
-        val holder = EditFamilyRecyclerAdapter.ViewHolder(view)
+        val holder = ViewHolder(view)
         holder.clearFocus()
         return holder
     }

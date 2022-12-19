@@ -1,4 +1,4 @@
-package com.lostark.lostarkassistanthomework
+package com.lostark.lostarkassistanthomework.settings
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -8,7 +8,10 @@ import android.widget.CheckBox
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
+import com.lostark.lostarkassistanthomework.CustomToast
+import com.lostark.lostarkassistanthomework.R
 import com.lostark.lostarkassistanthomework.checklist.rooms.Homework
 
 class GoldRecylerAdapter(
@@ -28,7 +31,7 @@ class GoldRecylerAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_chracter_list, parent, false)
-        return GoldRecylerAdapter.ViewHolder(view, list)
+        return ViewHolder(view, list)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -69,7 +72,7 @@ class GoldRecylerAdapter(
         lateinit var txtLevel: TextView
         lateinit var txtJob: TextView
         lateinit var chkCheck: CheckBox
-        lateinit var layoutBackground: LinearLayout
+        lateinit var layoutBackground: ConstraintLayout
 
         fun bind(listener: View.OnClickListener, item: Homework, context: Context) {
             imgJob = view.findViewById(R.id.imgJob)

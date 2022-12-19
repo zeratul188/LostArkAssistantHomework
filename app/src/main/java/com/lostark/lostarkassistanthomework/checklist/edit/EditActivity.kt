@@ -1,4 +1,4 @@
-package com.lostark.lostarkassistanthomework.checklist
+package com.lostark.lostarkassistanthomework.checklist.edit
 
 import android.content.Context
 import android.graphics.Color
@@ -16,6 +16,7 @@ import com.lostark.lostarkassistanthomework.*
 import com.lostark.lostarkassistanthomework.checklist.objects.SearchData
 import com.lostark.lostarkassistanthomework.checklist.rooms.Homework
 import com.lostark.lostarkassistanthomework.checklist.rooms.HomeworkDatabase
+import com.lostark.lostarkassistanthomework.settings.CheckDialog
 import org.jsoup.Jsoup
 
 class EditActivity : AppCompatActivity() {

@@ -1,4 +1,4 @@
-package com.lostark.lostarkassistanthomework
+package com.lostark.lostarkassistanthomework.settings
 
 import android.app.Dialog
 import android.content.Context
@@ -8,6 +8,7 @@ import android.view.Gravity
 import android.view.WindowManager
 import android.widget.Button
 import android.widget.TextView
+import com.lostark.lostarkassistanthomework.R
 
 class CheckDialog(private val context: Context) {
     private val dialog = Dialog(context)

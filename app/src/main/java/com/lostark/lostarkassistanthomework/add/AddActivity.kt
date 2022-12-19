@@ -1,10 +1,11 @@
-package com.lostark.lostarkassistanthomework
+package com.lostark.lostarkassistanthomework.add
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
 import android.widget.*
 import androidx.appcompat.widget.Toolbar
+import com.lostark.lostarkassistanthomework.*
 import com.lostark.lostarkassistanthomework.checklist.rooms.Homework
 import com.lostark.lostarkassistanthomework.checklist.rooms.HomeworkDatabase
 import com.lostark.lostarkassistanthomework.dbs.HomeworkDBAdapter

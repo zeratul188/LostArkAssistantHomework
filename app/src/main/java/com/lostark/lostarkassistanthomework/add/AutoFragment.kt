@@ -1,4 +1,4 @@
-package com.lostark.lostarkassistanthomework
+package com.lostark.lostarkassistanthomework.add
 
 import android.content.Context
 import android.graphics.drawable.ColorDrawable
@@ -13,6 +13,9 @@ import android.widget.EditText
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
+import com.lostark.lostarkassistanthomework.settings.ChracterRecylerAdapter
+import com.lostark.lostarkassistanthomework.LoadingDialog
+import com.lostark.lostarkassistanthomework.R
 import com.lostark.lostarkassistanthomework.checklist.RecyclerViewDecoration
 import com.lostark.lostarkassistanthomework.checklist.rooms.HomeworkDatabase
 import com.lostark.lostarkassistanthomework.objects.Chracter

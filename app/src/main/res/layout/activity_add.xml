@@ -1,105 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/background"
-    android:orientation="vertical"
-    tools:context=".AddActivity">
-    <androidx.appcompat.widget.Toolbar
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/toolBar"
-        android:minHeight="?attr/actionBarSize"
-        android:background="?attr/colorPrimary"/>
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="addViewModel"
+            type="com.lostark.lostarkassistanthomework.add.AddViewModel" />
+    </data>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="캐릭터 이름"
-            android:textSize="14dp"
-            android:textColor="@color/main_font"/>
-        <EditText
+        android:orientation="vertical"
+        android:background="@color/background"
+        tools:context=".add.AddActivity">
+        <androidx.appcompat.widget.Toolbar
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/edtName"
-            android:textSize="14dp"
-            android:textColor="@color/main_font"
-            android:hint="1~12글자"
-            android:maxLength="12"
-            android:background="@drawable/edit_style"
-            android:padding="10dp"
-            android:layout_marginTop="5dp"
-            android:textColorHint="@color/disabled_font"/>
-        <RadioGroup
+            android:id="@+id/toolBar"
+            android:minHeight="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"/>
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/rgAuto"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="10dp"
-            android:orientation="horizontal">
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:padding="10dp">
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/rdoAuto"
-                android:text="자동"
-                android:button="@null"
-                android:gravity="center"
-                android:textColor="@color/main_font"
-                android:checked="true"
-                android:background="@drawable/group_radio_style"
-                android:textSize="16dp"/>
-            <RadioButton
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:id="@+id/rdoSelf"
-                android:text="직접 입력"
-                android:button="@null"
-                android:gravity="center"
-                android:textColor="@color/main_font"
-                android:background="@drawable/group_radio_style"
-                android:textSize="16dp"/>
-        </RadioGroup>
-        <FrameLayout
-            android:layout_width="match_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1"
-            android:id="@+id/layoutFrame"/>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal">
-            <!--<android.widget.Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
-                android:layout_height="wrap_content"
-                android:id="@+id/btnAddGold"
-                android:background="@drawable/button_style"
-                android:text="골드 캐릭터 추가"
-                android:layout_marginRight="5dp"
-                android:layout_marginLeft="5dp"
+                android:id="@+id/txtNameInfo"
+                android:text="캐릭터 이름"
                 android:textSize="14dp"
                 android:textColor="@color/main_font"
-                style="?android:attr/borderlessButtonStyle"/>-->
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/edtName"
+                android:textSize="14dp"
+                android:textColor="@color/main_font"
+                android:hint="1~12글자"
+                android:maxLength="12"
+                android:background="@drawable/edit_style"
+                android:padding="10dp"
+                android:layout_marginTop="5dp"
+                android:textColorHint="@color/disabled_font"
+                app:layout_constraintTop_toBottomOf="@id/txtNameInfo"/>
+            <RadioGroup
+                android:layout_width="160dp"
+                android:layout_height="50dp"
+                android:id="@+id/rgAuto"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                app:layout_constraintTop_toBottomOf="@id/edtName"
+                app:layout_constraintLeft_toLeftOf="parent">
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdoAuto"
+                    android:text="자동"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/main_font"
+                    android:checked="true"
+                    android:background="@drawable/group_radio_style"
+                    android:textSize="16dp"/>
+                <RadioButton
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/rdoSelf"
+                    android:text="직접 입력"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:textColor="@color/main_font"
+                    android:background="@drawable/group_radio_style"
+                    android:textSize="16dp"/>
+            </RadioGroup>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:id="@+id/layoutFrame"
+                app:layout_constraintTop_toBottomOf="@id/rgAuto"
+                app:layout_constraintBottom_toTopOf="@id/btnAdd"
+                android:layout_marginBottom="10dp"
+                android:layout_marginTop="10dp"
+                app:layout_constraintVertical_weight="1"/>
             <android.widget.Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:id="@+id/btnAdd"
                 android:background="@drawable/button_style"
                 android:text="추가"
-                android:textSize="14dp"
+                android:textSize="16dp"
                 android:textColor="@color/main_font"
-                style="?android:attr/borderlessButtonStyle"/>
-        </LinearLayout>
+                style="?android:attr/borderlessButtonStyle"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </LinearLayout>
-</LinearLayout>
+</layout>

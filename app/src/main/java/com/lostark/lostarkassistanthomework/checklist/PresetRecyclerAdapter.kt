@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.RecyclerView
 import com.lostark.lostarkassistanthomework.R
 import com.lostark.lostarkassistanthomework.checklist.objects.Preset
@@ -54,7 +55,7 @@ class PresetRecyclerAdapter (
         lateinit var txtName: TextView
         lateinit var txtMax: TextView
         lateinit var txtEnd: TextView
-        lateinit var layoutBackground: LinearLayout
+        lateinit var layoutBackground: ConstraintLayout
 
         fun bind(item: Preset, context: Context, listener: View.OnClickListener) {
             imgIcon = view.findViewById(R.id.imgIcon)
